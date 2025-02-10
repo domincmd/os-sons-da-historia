@@ -1,0 +1,306 @@
+
+
+.section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.section.home{
+    background: url(images/assets/background.jpg) center/cover no-repeat;
+}
+
+.home-container {
+    width: max(40%, 600px);
+    height: max(50%, 500px);
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    box-shadow: rgba(0, 0, 0, 0.5) -10px 10px 20px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--dark-blue);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.home-description {
+    width: 80%;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+button.big-button {
+    cursor: pointer;
+    background-color: var(--red);
+    color: white;
+    padding: 17px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 1.5vmin;
+    transition: background-color 0.3s ease;
+}
+
+button.big-button:hover {
+    background-color: var(--dark-red);
+}
+
+button.no-bg {
+    background: transparent;
+    border: none;
+}
+
+button.arrow-btn {
+    border-radius: 20px;
+    border: none;
+    z-index: 20;
+}
+
+button.menu-btn {
+    cursor: pointer;
+    user-select: none;
+    padding: 20px 40px;
+}
+
+img.down-arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    cursor: pointer;
+}
+
+
+
+
+
+.section-desc-container {
+    background-color: white;
+    width: max(60vh, 500px);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.5) -10px 10px 10px;
+    width: max(45vh, 400px);
+}
+
+.section:not(.home) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.music-container {
+    width: 60%;
+    height: max(40%, 350px);
+    
+    border-radius: 50px;
+    padding: 40px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.5) -10px 10px 10px;
+    overflow: hidden;
+
+}
+
+.right-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow, .right-arrow {
+    z-index: 998;
+}
+
+.moving-music-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(30, calc(100%/3));
+    grid-template-rows: 100%; 
+    
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.music-title {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.music {
+    
+    width: min-content;
+    height: min-content;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    transition: 0.3s ease;
+    max-width: 240px;
+    
+}
+
+.music > .music-title, .music > .music-author {
+    word-wrap: break-word; /*outdated asf*/
+    overflow-wrap: break-word; /*breaks*/
+    white-space: normal; /*allows*/
+}
+
+
+.music:hover {
+    transform: scale(1.1);
+}
+
+.music-img {
+    width: 200px;
+}
+
+
+
+.section.a-heranca-colonial {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(images/a-heranca-colonial/bg.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.section-desc-container.a-heranca-colonial {
+    background-color: rgb(76,0,69);
+    padding: 20px;
+    text-align: center;
+}
+
+.section.a-heranca-colonial .music {
+    background-color: rgb(127,23,118);
+}
+
+.section.a-heranca-colonial .music {
+    background-color: rgb(127,23,118);
+}
+
+.section.a-heranca-colonial .music-container {
+    background-color: rgb(168,78,160);
+}
+
+button.arrow-btn.a-heranca-colonial {
+    background-color: rgb(76,0,69);
+}
+
+
+.section.o-brasil-em-modernizacao {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(images/o-brasil-em-modernizacao/bg.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.section-desc-container.o-brasil-em-modernizacao {
+    background-color: rgb(5,36,73);
+    padding: 20px;
+    text-align: center;
+}
+
+.section.o-brasil-em-modernizacao .music {
+    background-color: rgb(30,72,122);
+}
+.section.o-brasil-em-modernizacao .music-container {
+    background-color: rgb(82,118,162);
+}
+
+button.arrow-btn.o-brasil-em-modernizacao {
+    background-color: rgb(5,36,73);
+}
+
+.section.a-musica-que-se-fez-brasileira {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(images/a-musica-que-se-fez-brasileira/bg.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.section-desc-container.a-musica-que-se-fez-brasileira {
+    background-color: rgb(87,107,0);
+    padding: 20px;
+    text-align: center;
+}
+
+.section.a-musica-que-se-fez-brasileira .music {
+    background-color: rgb(121,147,11);
+}
+.section.a-musica-que-se-fez-brasileira .music-container {
+    background-color: rgb(213,238,110);
+}
+
+button.arrow-btn.a-musica-que-se-fez-brasileira {
+    background-color: rgb(87,107,0);
+}
+
+
+
+.section.a-musica-de-impacto-politico {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(images/a-musica-de-impacto-politico/bg.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.section-desc-container.a-musica-de-impacto-politico {
+    background-color: rgb(112,68,0);
+    padding: 20px;
+    text-align: center;
+}
+
+.section.a-musica-de-impacto-politico .music {
+    background-color: rgb(153,98,11);
+}
+.section.a-musica-de-impacto-politico .music-container {
+    background-color: rgb(187,127,113);
+}
+
+button.arrow-btn.a-musica-de-impacto-politico {
+    background-color: rgb(112,68,0);
+}
+
+
+
+
+.section.pelos-alunos {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(images/pelos-alunos/bg.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.section-desc-container.pelos-alunos {
+    background-color: rgb(255, 191, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+.section.pelos-alunos .music {
+    background-color: rgb(255, 191, 0);
+}
+.section.pelos-alunos .music-container {
+    background-color: rgb(255, 215, 96);
+}
+
+button.arrow-btn.pelos-alunos {
+    background-color: rgb(235, 176, 0);
+}

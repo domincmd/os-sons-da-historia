@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Sons da História</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="global/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <span class="logo-span"><span style="color: red">S</span><span style="color: white">H</span></span> 
+        </div>
+        <div class="dropdown-main">
+            <button class="no-bg menu-btn"><img src="images/assets/menu.svg" alt=""></button>
+            <div class="dropdown-content">
+                <ul>
+                    <li onclick="openPopup('sobre')">Sobre</li>
+                    <li onclick="openPopup('selecao-das-cancoes')">Seleção das Canções</li>
+                    <li onclick="openPopup('musica-e-historia')">Música e História</li>
+                    <li onclick="openPopup('saiba-mais')">Saiba Mais</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="background-darkener"></div>
+    <div class="popup">
+        
+        <button class="close-button no-bg" onclick="closePopup()"><img src="/images/assets/close.svg" alt=""></button>
+        <h2 class="popup-title"></h2>
+        <div class="popup-content"></div>
+    </div>
+    <div class="section home" id="0">
+        <div class="home-container">
+            <h1>Os sons da História</h1>
+            <h3 style="padding-bottom: 30px"><i>O Brasil e sua música</i></h3>
+            <center><p style="padding-bottom: 30px" class="home-description">
+                A música sempre foi essencial para a humanidade e, no Brasil, acompanhou a evolução da sociedade desde o período colonial até a consolidação da música popular brasileira no século XX, resultante da fusão de influências indígenas, africanas e europeias. Além de sua riqueza e criatividade, a música no país narrou, criticou e refletiu a realidade histórica. O projeto Os Sons da História busca explorar essa relação, oferecendo um material interativo que permite ouvir canções, compreender suas letras e aprender sobre a história do Brasil por meio da música.</p></center>
+            <button class="big-button" onclick="currentScrollIndex++; scrollToCurrentIndex()">Quero Conhecer!</button>
+        </div>
+        <img src="images/assets/down-arrow.svg" alt="" class="down-arrow" onclick="scrollDown()">
+    </div>
+    <div class="section a-heranca-colonial" id="1">
+        <div class="section-desc-container a-heranca-colonial">
+            <h1 style="padding-bottom:30px">A herança colonial</h1>
+            <center><p style="text-align: justify; width: 90%">Durante toda a história da música brasileira, o tempo em que essa terra era uma colônia portuguesa é constantemente citado e interpretado. A interação que aqui se deu entre o colonizador branco europeu, o indígena nativo e o negro africano trazido como escravo é tema dessas canções, que variam na forma de tratar o assunto. 
+                <br>Às vezes, o foco está nos diferentes elementos que cada cultura trouxe para o Brasil; outras enfocam a relação de exploração e agressão do colonizador ao índio ou ao escravo; ainda, outras canções trazem a resistência dos escravos, o processo de povoamento... São infindáveis abordagens, mas que concordam em um ponto: a importância da herança colonial é enorme, e sem entendê-la é impossível pensar o Brasil de hoje.</p></center>
+        </div>
+        <div class="music-container a-heranca-colonial">
+            <button class="arrow-btn right-arrow a-heranca-colonial" onclick="swipeSong(this, 'right')"><img src="images/assets/right-arrow.svg" alt=""></button>
+            <button class="arrow-btn left-arrow a-heranca-colonial" onclick="swipeSong(this, 'left')"><img src="images/assets/left-arrow.svg" alt=""></button>
+            <div class="moving-music-container a-heranca-colonial" style="--index: 0;">
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-heranca-colonial/musics/clara-nunes-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Canto das três raças</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Clara Nunes</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-heranca-colonial/musics/almir-sater-serra-de-maracaju-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Serra de Maracaju</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Almir Sater</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-heranca-colonial/musics/chico-buarque-fado-tropical-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Fado Tropical</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Chico Buarque</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-heranca-colonial/musics/baby-brasil-indio-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Todo Dia Era Dia de Índio</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Baby do Brasil</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-heranca-colonial/musics/baden-powell-canto-de-ossanha-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Canto de Ossanha</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Baden Powell</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-heranca-colonial/musics/chico-buarque-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Sinhá</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Chico Buarque</i></span>
+                </div>
+
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-heranca-colonial/musics/pc-pinheiro-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title" style="font-size: 0.7rem;">Toque de São Bento Grande de Angola</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Paulo César Pinheiro</i></span>
+                </div>
+
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-heranca-colonial/musics/geraldo-filme-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">História da capoeira</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Geraldo Filme</i></span>
+                </div>
+
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-heranca-colonial/musics/martinho-chico-rei-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Chico Rei</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Martinho da Vila</i></span>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+    <div class="section o-brasil-em-modernizacao" id="2">
+        <div class="section-desc-container o-brasil-em-modernizacao">
+            <h1 style="padding-bottom:30px">O Brasil em Modernização</h1>
+            <center><p style="text-align: justify; width: 90%">
+                Desde a independência, o Brasil passou por um contínuo processo de modernização, mais evidente nos grandes centros urbanos, como o Rio de Janeiro da Belle-Époque, onde se alargaram ruas, removeram cortiços e vacinaram a população. A música brasileira refletiu esse processo, expressando a saudade dos migrantes, retratando a desigualdade social e questionando a quem servia a modernização, destacando as diferentes experiências de ricos, pobres, homens, mulheres, brancos e negros nesse cenário em transformação.</p></center>
+        </div>
+        <div class="music-container o-brasil-em-modernizacao">
+            <button class="arrow-btn right-arrow o-brasil-em-modernizacao" onclick="swipeSong(this, 'right')"><img src="images/assets/right-arrow.svg" alt=""></button>
+            <button class="arrow-btn left-arrow o-brasil-em-modernizacao" onclick="swipeSong(this, 'left')"><img src="images/assets/left-arrow.svg" alt=""></button>
+            <div class="moving-music-container o-brasil-em-modernizacao" style="--index: 0;">
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/geraldo-filme-tebas-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Tebas</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Geraldo Filme</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/joao-da-baiana-cabide-de-molambo-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Cabide de Molambo</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>João da Baiana</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/catulo-luar-do-sertao-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Luar do Sertão</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Catulo da Paixão Cearense, João Pernambuco</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/donga-pelo-telefone-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Pelo Telefone</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Donga</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/assis-valente-recenseamento-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Recenseamento</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Assis Valente</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/adoniran-barbosa-despejo-na-favela-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Despejo na favela</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Adoniran Barbosa</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/ivone-lara-sonho-meu-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Sonho Meu</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Clementina de Jesus e Dona Ivone Lara</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/luiz-gonzaga-sertao-sofredor-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Sertão Sofredor</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Luiz Gonzaga</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/chico-science-a-cidade-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">A Cidade</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Chico Science & Nação Zumbi</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/itamar-assumpcao-tristes-tropicos-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Tristes Trópicos</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Itamar Assumpção & As Orquídeas do Brasil</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/belchior-latino-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Apenas um rapaz latino americano</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Belchior</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/racionais-nego-drama-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Nego Drama</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Racionais MC's</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/criolo-nao-existe-amor-em-sp-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Não Existe Amor em SP</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Criolo</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/zeca-baleiro-vai-de-madureira-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Vai de Madureira</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Zeca Baleiro</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/wilson-das-neves-morro-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title" style="font-size: 0.7rem">O dia em que o morro descer e não for carnaval</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Wilson das Neves</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/ary-lobo-ze-paraiba-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Zé Paraíba</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Ary Lobo</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/candeia-ouro-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Ouro desça do seu trono/Mil réis</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Candeia</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/chico-cesar-mama-africa-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Mama África</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Chico César</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/o-brasil-em-modernizacao/musics/lenine-candeeiro-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Candeeiro Encantado</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Lenine</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section a-musica-que-se-fez-brasileira" id="3">
+        <div class="section-desc-container a-musica-que-se-fez-brasileira">
+            <h1 style="padding-bottom:30px">A música que se fez Brasileira</h1>
+            <center><p style="text-align: justify; width: 90%">
+                Entre 1920 e 1950, a música popular brasileira consolidou sua identidade. Os diversos ritmos do início do século XX se misturaram, e, nos anos 1950, alguns já eram vistos como representativos do Brasil. Com a centralização do país no Rio de Janeiro durante a Era Vargas, o samba carioca se firmou como símbolo nacional, superando outros gêneros como o sertanejo e o baião. O rádio e o gravador ampliaram seu alcance, criando os primeiros ídolos nacionais. No entanto, surgiram debates: por que o samba e não outro gênero? Como lidar com influências estrangeiras? Os artistas e canções dessa época ecoam essas questões na construção da música brasileira.</center>
+        </div>
+        <div class="music-container a-musica-que-se-fez-brasileira">
+            <button class="arrow-btn right-arrow a-musica-que-se-fez-brasileira" onclick="swipeSong(this, 'right')"><img src="images/assets/right-arrow.svg" alt=""></button>
+            <button class="arrow-btn left-arrow a-musica-que-se-fez-brasileira" onclick="swipeSong(this, 'left')"><img src="images/assets/left-arrow.svg" alt=""></button>
+            <div class="moving-music-container a-musica-que-se-fez-brasileira" style="--index: 0;">
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/chiquinha-gonzaga-o-abre-alas-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Ó abre alas/Allah-La Ô</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Chiquinha Gonzaga/Carlos Galhardo</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/pixinguinha-os-oito-batutas-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Os Oito Batutas</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Pixinguinha</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/noel-rosa-conversa-de-botequim-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Conversa de botequim</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Noel Rosa</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/carmen-miranda-tico-tico-no-fuba-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Tico-tico no fubá</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Carmen Miranda</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/orlando-silva-carinhoso-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Carinhoso</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Orlando Silva</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/heitor-villa-lobos-o-trenzinho-do-caipira-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">O trenzinho do caipira</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Heitor Villa-Lobos</i></span>
+                </div>
+
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/francisco-alves-aquarela-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Aquarela do Brasil</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Francisco Alves</i></span>
+                </div>
+
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/dorival-caymmi-baiana-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">O que é que a baiana tem?</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Dorival Caymmi</i></span>
+                </div>
+
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/luiz-gonzaga-asa-branca-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Asa Branca</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Luiz Gonzaga e Humberto Teixeira</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/carmem-miranda-americanizada-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Disseram que voltei <br>americanizada</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Carmen Miranda</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/jackson-do-pandeiro-chiclete-com-banana-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Chiclete com banana</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Jackson do Pandeiro</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/tom-jobim-garota-de-ipanema-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Garota de Ipanema</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Tom Jobim & Vinícius de Moraes</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/elba-lenine-leao-do-norte-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Leão do Norte</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Elba Ramalho e Lenine</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section a-musica-de-impacto-politico" id="4">
+        <div class="section-desc-container a-musica-de-impacto-politico">
+            <h1 style="padding-bottom:30px">A música de impacto político</h1>
+            <center><p style="text-align: justify; width: 90%">
+                Ao longo da história da música brasileira, muitos artistas criaram canções que dialogavam com questões políticas, sociais e econômicas. Toda música reflete seu tempo, mas algumas se destacaram por seu impacto direto, seja exaltando líderes, ironizando contradições sociais ou criticando autoritarismos. Mesmo que nem sempre tenham assumido esse propósito, essas canções marcaram a música popular brasileira com forte caráter político.</center>
+        </div>
+        <div class="music-container a-musica-de-impacto-politico">
+            <button class="arrow-btn right-arrow a-musica-de-impacto-politico" onclick="swipeSong(this, 'right')"><img src="images/assets/right-arrow.svg" alt=""></button>
+            <button class="arrow-btn left-arrow a-musica-de-impacto-politico" onclick="swipeSong(this, 'left')"><img src="images/assets/left-arrow.svg" alt=""></button>
+            <div class="moving-music-container a-musica-de-impacto-politico" style="--index: 0;">
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/bando-de-tangaras-g-e-ge-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">G e Ge (Seu Getúlio)</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Bando de Tangarás</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/nuno-roland-glorias-ao-brasil-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Glórias ao Brasil</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Nuno Roland</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/moreira-da-silva-diplomata-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Diplomata</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Moreira da Silva</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-que-se-fez-brasileira/musics/chiquinha-gonzaga-o-abre-alas-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Retrato do velho</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Haroldo Lobo, Marino Pinto</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/wilson-batista-lenco-no-pescoco-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Lenço no pescoço</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Wilson Batista</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/ataulfo-alves-bonde-sao-januario-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Bonde São Januário</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Ataulfo Alves</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/chico-buarque-roda-viva-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Roda Viva</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Chico Buarque</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/caetano-veloso-e-proibido-proibir-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">É proibido proibir</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Caetano Veloso e Os Mutantes</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/gilberto-gil-back-in-bahia-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Back in Bahia</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Gilberto Gil</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/ze-keti-opiniao-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Opinião</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Zé Kéti</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/geraldo-vandre-flores-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Pra não dizer que não falei das flores</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Geraldo Vandré</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/elis-regina-aos-nossos-filhos-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Aos Nossos Filhos / Velha Roupa Colorida</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Elis Regina</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/raul-seixas-rock-das-aranha-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Rock das ‘aranha’ / Aluga-se</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Raul Seixas</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/a-musica-de-impacto-politico/musics/gabriel-pensador-to-feliz-matei-o-presidente-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Tô Feliz (matei o presidente)</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Gabriel, O Pensador</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section pelos-alunos" id="5">
+        <div class="section-desc-container pelos-alunos">
+            <h1 style="padding-bottom:30px">Pelos Alunos</h1>
+            <center><p style="text-align: justify; width: 90%">
+                O Som da História busca fazer os alunos compreenderem a relevância da música popular para o Brasil e sua história. As canções desta seção foram selecionadas e analisadas pelos alunos dos 9os anos, que elaboraram textos introdutórios, comentários e questões para reflexão. Esses trabalhos, cuidadosamente escolhidos, representam tanto o sucesso de alunos anteriores quanto uma inspiração para os atuais e futuros, incentivando a escuta e a compreensão da história através da música.</center>
+        </div>
+        <div class="music-container pelos-alunos">
+            <button class="arrow-btn right-arrow pelos-alunos" onclick="swipeSong(this, 'right')"><img src="images/assets/right-arrow.svg" alt=""></button>
+            <button class="arrow-btn left-arrow pelos-alunos" onclick="swipeSong(this, 'left')"><img src="images/assets/left-arrow.svg" alt=""></button>
+            <div class="moving-music-container pelos-alunos" style="--index: 0;">
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/pelos-alunos/musics/chico-buarque-acorda-amor-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Acorda Amor</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Chico Buarque</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/pelos-alunos/musics/chico-buarque-meu-caro-amigo-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Meu Caro Amigo</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Chico Buarque</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/pelos-alunos/musics/elis-regina-bebado-equilibrista-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">O Bêbado e a Equilibrista</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Elis Regina</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/pelos-alunos/musics/gonzaguinha-pequena-memoria-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Pequena memória para um tempo sem memória</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Gonzaguinha</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/pelos-alunos/musics/legiao-urbana-que-pais-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">Que país é esse?</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Legião Urbana</i></span>
+                </div>
+                <div class="music" onclick="changeSong(this)">
+                    <img src="images/pelos-alunos/musics/tom-ze-sao-sao-paulo-card.jpg" alt="" draggable="false" class="music-img"><br>
+                    <span class="music-title">São São Paulo</span> <br>
+                    <span class="music-author" style="color: darkgray"><i>Tom Zé</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+<script src="/global/constants.js"></script>
+</html>

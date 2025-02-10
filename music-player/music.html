@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Sons da História: Música</title>
+    <link rel="stylesheet" href="mscstyles.css">
+    <link rel="stylesheet" href="../global/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container" onclick="window.location.href = window.location.href.split('/').slice(0, -2).join('/')">
+            <span class="logo-span"><span style="color: red">S</span><span style="color: white">H</span></span> 
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="music-card">
+            <img src="" alt="" class="music-img">
+            <h2 class="music-title"></h2>
+            <h4 class="music-author"></h4>
+            <div class="player-container">
+                <audio src="test.mp3" preload="metadata" class="music"></audio>
+                <input type="range" class="seek-slider" max="100" min="0" value="0">
+                <div style="display: flex; justify-content: space-between;">
+                    <span class="current-time">00:00</span>
+                    <button class="play-icon" onclick="playClick()"><img src="../images/assets/play-button.svg" alt="" class="play-icon-img"></button>
+                    <span class="duration">00:00</span>
+                </div>
+                
+                <!--<input type="range" class="volume-slider" max="100" value="100">-->
+            </div>
+        </div>
+        <div class="info-container">
+            <iframe src="" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+<script src="../global/constants.js"></script>
+<script src="music.js"></script>
+</html>
