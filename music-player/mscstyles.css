@@ -65,3 +65,11 @@ html {
 .margin-top {
     margin-top: 20px
 }
+
+.volume-container {
+    margin: 0px 40px;
+    display: flex;
+    justify-items: center;
+    gap: 20px;
+    align-items: center;
+}

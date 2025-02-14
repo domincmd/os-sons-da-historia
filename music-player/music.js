@@ -11,6 +11,7 @@ const params = new URLSearchParams(window.location.search);
 const title = document.querySelector("title");
 const iframe = document.querySelector("iframe")
 const infoContainer = document.querySelector(".info-container")
+const volumeSlider = document.querySelector(".volume-slider")
 
 const song = params.get("song");
 const author = params.get("author");
@@ -46,6 +47,14 @@ seekSlider.addEventListener("mousedown", () => {
 seekSlider.addEventListener("mouseup", () => {
     startPlaying()
 })
+
+volumeSlider.addEventListener("mouseup", (e) => {
+    console.log(volumeSlider.value)
+    audio.volume = volumeSlider.value / 100
+})
+
+
+
 
 function formatSeconds(duration) {
     let hours = Math.floor(duration / 3600);
