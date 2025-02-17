@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 ::-webkit-scrollbar {
   width: 10px; /* For vertical scrollbar */
   height: 10px; /* For horizontal scrollbar */
@@ -31,7 +32,10 @@
     --dark-red: rgb(199, 43, 43);
     --dark-blue: rgb(13, 24, 40);
     --less-dark-blue: rgb(23, 42, 69);
+    --aqua: rgb(0, 213, 255);
 }
+
+
 
 .header {
     position: fixed;
@@ -117,7 +121,6 @@ body {
     left: 15%;
     top: 10%;
     border-radius: 20px;
-    width: 70vw;
     height: 80vh;
     background-color: var(--dark-blue);
     box-shadow: rgb(0, 0, 0) 0px 0px  10px;
@@ -131,19 +134,7 @@ body {
     margin-bottom: 20px;
 }
 
-.close-button {
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    transition: 0.3s ease;
-    width: 26px;
-    height: 26px;
-}
 
-.close-button:hover {
-    transform: scale(1.2) rotate(90deg);
-}
 
 .background-darkener {
     position: fixed;
@@ -179,4 +170,50 @@ ul {
 li {
     list-style-position: inside; /* Ensures bullets align with text */
     text-indent: -5px; /* Fine-tune alignment if necessary */
+}
+
+
+.margin-top {
+    margin-top: 20px
+}
+
+.tooltip-container {
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.no-link:link, .no-link:visited {
+    color: var(--aqua);
+}
+
+.tooltip-content {
+    position: absolute;
+    top: 0;
+    transform: translateY(-105%);
+    display: none;
+    background-color: #333;
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 500px;
+    text-align: justify;
+    border-bottom: 5px var(--aqua) solid;
+}
+
+.tooltip-content::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid var(--aqua);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 23px);
+    
+}
+
+.tooltip-container:hover > .tooltip-content {
+    display: block;
 }

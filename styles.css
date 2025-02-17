@@ -304,3 +304,57 @@ button.arrow-btn.a-musica-de-impacto-politico {
 button.arrow-btn.pelos-alunos {
     background-color: rgb(235, 176, 0);
 }
+
+
+.close-button {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: 0.3s ease;
+    width: 26px;
+    height: 26px;
+}
+
+.close-button:hover {
+    transform: scale(1.2) rotate(90deg);
+}
+
+@media (max-width: 800px) {
+    .popup {
+        width: 95vw;
+        left: 2.5%;
+    }
+    .home-container {
+        width: 100%;
+        border-radius: 90px;
+        height: min-content;
+    }
+
+    .music-container {
+        width: 90%;
+        height: 30%;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .section-desc-container {
+        margin-top: 50px;
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .music > img {
+        width: 90px;
+    }
+    
+}
+
+@media (min-width: 801px) {
+    .popup {
+        width: 70vw;
+        left: 15%;
+    }
+}

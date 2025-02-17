@@ -62,9 +62,6 @@ html {
     border-radius: 20px;
 }
 
-.margin-top {
-    margin-top: 20px
-}
 
 .volume-container {
     margin: 0px 40px;
@@ -73,3 +70,18 @@ html {
     gap: 20px;
     align-items: center;
 }
+
+@media (max-width: 800px) {
+    
+    .main-container {
+        padding-top: 120px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-container {
+        width: 90%;
+    }
+}
+
+  
